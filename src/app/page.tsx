@@ -1,8 +1,8 @@
+import { redirect } from 'next/navigation';
+import { format } from 'date-fns';
 
 export default function Home() {
-  return (
-   <div>
-    <h1 className="font-mono">Hello</h1>
-   </div>
-  );
+  const today = format(new Date(), 'yyyy-MM-dd');
+
+  redirect(`/day/${today}`);
 }
