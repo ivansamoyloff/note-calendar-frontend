@@ -9,7 +9,7 @@ export default function EventLayer({
   events: IEvent[],
   containerWidth: number | null
 }) {
-  const positionedEvents = calculateEventLayout(events);
+  const positionedEvents = calculateEventLayout(events); // TODO: Add useMemo or think how to optimize rerenders
 
   return (
     <>

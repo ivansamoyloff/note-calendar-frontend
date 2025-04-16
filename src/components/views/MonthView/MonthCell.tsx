@@ -1,24 +1,36 @@
-import { isToday, format } from "date-fns";
+import { isToday, isBefore, startOfDay, format } from "date-fns";
 import { cn } from "@/lib/utils";
+import EventGroup from "./EventGroup";
 
 export default function MonthCell({
   date,
-  isCurrentMonth
+  isCurrentMonth,
+  lastDay
 }: {
   date: Date;
   isCurrentMonth: boolean;
+  lastDay: boolean;
 }) {
-  const today = isToday(date);   
+  const today = isToday(date);
+  const isBeforeToday = isBefore(startOfDay(date), startOfDay(new Date()));
+
   return (
-    <div className="border-r border-gray-20 p-1 h-full">
-      <div className={cn(
-        'text-xs font-medium mb-1 rounded px-1',
+    <div className={cn(
+      "border-gray-20  px-2 py-1 h-full flex flex-col items-center",
+      !lastDay && 'border-r-[2px]'
+    )}>
+      <span className={cn(
+        'font-saira font-normal text-base mb-2 px-2 py-1 flex justify-center rounded-full',
         today && 'bg-blue-50/50 text-white',
-        !isCurrentMonth && 'text-gray-50'
+        !isCurrentMonth && 'text-disabled'
       )}>
         {format(date, 'd')}
-      </div>
-      <span>Tasks placed here</span>
+      </span>
+      <EventGroup
+        events={[]}
+        isBeforeToday={isBeforeToday}
+        isCurrentMonth={isCurrentMonth}
+      />      
     </div>
   );
 };

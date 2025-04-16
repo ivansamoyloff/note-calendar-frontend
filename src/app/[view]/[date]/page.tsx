@@ -1,6 +1,7 @@
 import DayView from '@/components/views/DayView/DayView';
 import WeekView from '@/components/views/WeekView/WeekView';
 import MonthView from '@/components/views/MonthView/MonthView';
+import YearView from '@/components/views/YearView/YearView';
 import { notFound } from 'next/navigation';
 
 const VALID_VIEWS = ['day', 'week', 'month', 'year'] as const;
@@ -27,7 +28,7 @@ export default async function CalendarPage({
       case 'day': return <DayView date={curDate}/>;
       case 'week': return <WeekView date={curDate}/>;
       case 'month': return <MonthView date={curDate}/>;
-      case 'year': return <DayView date={curDate}/>;
+      case 'year': return <YearView date={curDate}/>;
     }
   }
 

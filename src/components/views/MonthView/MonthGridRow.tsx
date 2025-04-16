@@ -1,16 +1,27 @@
 import MonthCell from "./MonthCell";
+import { cn } from "@/lib/utils";
 
 export default function MonthGridRow ({
   week,
-  currentMonth
+  currentMonth,
+  lastRow,
 }: {
   week: Date[];
   currentMonth: number;
+  lastRow: boolean;
 }) {
   return (
-    <div className="grid grid-cols-7 border-b border-gray-20">
-      {week.map((date) => (
-        <MonthCell key={date.toISOString()} date={date} isCurrentMonth={date.getMonth() === currentMonth} />
+    <div className={cn(
+      "grid grid-cols-7 border-gray-20",
+      !lastRow && 'border-b-[2px]'
+    )}>
+      {week.map((date, idx) => (
+        <MonthCell
+          key={date.toISOString()}
+          date={date}
+          isCurrentMonth={date.getMonth() === currentMonth}
+          lastDay={idx === 6}
+        />
       ))}
     </div>
   )

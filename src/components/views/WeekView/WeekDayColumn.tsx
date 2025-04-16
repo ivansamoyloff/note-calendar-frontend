@@ -69,7 +69,7 @@ export default function WeekDayColumn({
     >
       <div className={'flex flex-col items-center justify-center'}>
         <span className={cn(
-          'font-saira font-[28px] text-center px-2 py-1 rounded-full select-none',
+          'font-saira text-[18px] text-center px-2 py-1 rounded-full select-none',
           isToday(date) ? 'bg-blue-50/30' : ''
         )}>
           {format(date, 'EEE, d')}
