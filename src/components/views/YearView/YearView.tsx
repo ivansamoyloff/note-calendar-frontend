@@ -1,6 +1,6 @@
 'use client';
 
-import { Calendar } from "@/components/ui/calendar/Calendar";
+import { CustomCalendar } from "@/components/ui/calendar/CustomCalendar";
 import { format } from "date-fns";
 import { useRouter, usePathname } from "next/navigation"
 
@@ -24,7 +24,7 @@ export default function YearView({ date }: { date: Date }){
       {months.map((monthDate, idx) => {
         const header = () => (<span className="font-saira text-lg ml-1.5">{format(monthDate ,'MMMM')}</span>)
         return(
-          <Calendar
+          <CustomCalendar
             key={idx}
             mode='single'
             month={monthDate}

@@ -6,7 +6,7 @@ import { format, parseISO, addMonths, subMonths, isSameMonth} from "date-fns";
 import { formatDate } from "@/lib/date";
 import { DayPickerProps } from "react-day-picker";
 import CalendarHeader from './CalendarHeader';
-import { Calendar } from './Calendar';
+import { CustomCalendar } from './CustomCalendar';
 
 export const AsideCalendar = ({ date }: { date: string }) => {
 
@@ -41,7 +41,7 @@ export const AsideCalendar = ({ date }: { date: string }) => {
     />
 
   return (
-    <Calendar
+    <CustomCalendar
       header={header}
       modifiers={modifiers}
       handleSelect={handleSelect}

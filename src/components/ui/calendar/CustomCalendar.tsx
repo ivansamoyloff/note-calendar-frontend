@@ -3,24 +3,24 @@
 import * as React from "react"
 import { DayPicker} from "react-day-picker"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/buttons/button"
+import { buttonVariants } from "@/components/ui/button"
 
 const weekdayShort = ["S", "M", "T", "W", "T", "F", "S"]
 
 type CalendarProps = React.ComponentProps<typeof DayPicker> & { 
   handleSelect: (newDate?: Date | undefined) => void; 
   setMonth?: React.Dispatch<React.SetStateAction<Date>>;
-  month: Date;
+  month?: Date;
   header?: () => React.JSX.Element,
   isYearView?: boolean;
 };
 
-function Calendar({
+function CustomCalendar({
   className,
   classNames,
   showOutsideDays = true,
   modifiers,
-  month,
+  month = new Date(),
   handleSelect = () => {},
   setMonth = () => {},
   header = () => (<></>),
@@ -101,4 +101,4 @@ function Calendar({
   )
 }
 
-export { Calendar }
+export { CustomCalendar }
