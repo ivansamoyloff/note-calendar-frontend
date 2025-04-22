@@ -12,7 +12,7 @@ export default function MonthGridRow ({
 }) {
   return (
     <div className={cn(
-      "grid grid-cols-7 border-gray-20",
+      "grid grid-cols-7 border-gray-20 dark:border-blue-80",
       !lastRow && 'border-b-[2px]'
     )}>
       {week.map((date, idx) => (

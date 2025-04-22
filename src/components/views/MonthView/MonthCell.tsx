@@ -16,7 +16,7 @@ export default function MonthCell({
 
   return (
     <div className={cn(
-      "border-gray-20  px-2 py-1 h-full flex flex-col items-center",
+      "border-gray-20  px-2 py-1 h-full flex flex-col items-center dark:border-blue-80",
       !lastDay && 'border-r-[2px]'
     )}>
       <span className={cn(

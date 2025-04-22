@@ -62,7 +62,7 @@ const variantStyles: Record<Variant, string> = {
 };
 
 const sizeStyles: Record<Size, string> = {
-  sm: `p-3 rounded-md text-lg focus-visible:outline-[1px]`,
-  md: `p-4 rounded-xl text-[28px] focus-visible:outline-[2px]`,
-  lg: `p-4 rounded-2xl text-[32px] focus-visible:outline-[2px]`,
+  sm: `p-3 rounded-md text-[14px] focus-visible:outline-[1px]`,
+  md: `p-4 rounded-xl text-[22px] focus-visible:outline-[2px]`,
+  lg: `p-4 rounded-2xl text-[26px] focus-visible:outline-[2px]`,
 } 

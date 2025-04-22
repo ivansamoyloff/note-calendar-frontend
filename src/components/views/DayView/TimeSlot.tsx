@@ -38,7 +38,7 @@ export default function TimeSlot({
             </div>
           </div>
           <div className={cn(
-            'w-3 border-[2px] border-l-0 border-gray-20',
+            'w-3 border-[2px] border-l-0 border-gray-20 dark:border-blue-80',
             idx === 0 ? '' : 'border-t-0',
             lastHour ? 'border-b-0' : ''
           )}>
@@ -46,7 +46,7 @@ export default function TimeSlot({
         </>
       )}
       <div className={cn(
-        'w-full px-2 py-1 border-[2px] border-l-0 border-r-0 border-gray-20 cursor-grab',
+        'w-full px-2 py-1 border-[2px] border-l-0 border-r-0 border-gray-20 cursor-grab dark:border-blue-80',
         idx === 0 ? '' : 'border-t-0',
         lastHour ? 'border-b-0' : '',
         withoutLabel ? 'border-r-2' : ''

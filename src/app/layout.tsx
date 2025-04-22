@@ -1,9 +1,9 @@
 // import type { Metadata } from 'next';
 import { Saira, Roboto_Mono } from 'next/font/google';
 import '../styles/global.css';
-import { ThemeProvider } from '../components/theme-provider';
+import { ThemeProvider } from "../components/theme/theme-provider";
+import { ThemeSync } from '@/components/theme/ThemeSync';
 import { StoreProvider } from '@/store/utils/contextProvider';
-// import { ModalRoot } from '@/components/modals/ModalRoot';
 import ClientWrapper from '@/components/ClientWrapper';
 
 const saira = Saira({
@@ -31,16 +31,16 @@ export default async function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning className='h-screen overflow-auto'>
       <body
-        className={`${saira.variable} ${robotoMono.variable} px-10 pt-7 h-full overflow-auto`}
+        className={`${saira.variable} ${robotoMono.variable} px-10 pt-7 h-full overflow-auto dark:bg-blue-100`}
       >
         <StoreProvider>
           <ThemeProvider
             attribute='class'
-            defaultTheme='light' // TODO: change to system
+            defaultTheme='system'
             enableSystem
-            disableTransitionOnChange
           >
             {children}
+            <ThemeSync />
             <ClientWrapper />
           </ThemeProvider>
         </StoreProvider>

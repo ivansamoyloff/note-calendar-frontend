@@ -33,7 +33,7 @@ export default async function CalendarPage({
   }
 
   return (
-    <main className="h-full pt-12 px-8 text-lg flex-1 overflow-auto rounded-t-[30px] rounded-b-none shadow-body-calendar">
+    <main className="h-full pt-12 px-8 text-lg flex-1 overflow-auto rounded-t-[30px] rounded-b-none shadow-body-calendar dark:bg-blue-90">
       {renderCurView()}
     </main>
   )

@@ -12,8 +12,8 @@ export const ModalRoot = () => {
   if (!isOpen || !content) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="bg-white dark:bg-zinc-900 p-12 pb-20 rounded-xl relative w-full max-w-lg">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 dark:bg-white/50">
+      <div className="bg-white dark:bg-blue-100 p-12 pb-20 rounded-xl relative w-full max-w-lg">
         <CustomButton
           className="absolute p-2 top-3 right-3"
           onClick={closeModal}

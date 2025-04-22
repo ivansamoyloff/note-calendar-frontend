@@ -10,10 +10,10 @@ export default async function CalendarLayout({
   params: { view: string; date: string };
 }>) {
   return (
-    <div className="flex flex-col h-full">
-      <Header params={params} />
-      <div className="flex flex-1">
-        <Sidebar params={params} />
+    <div className="flex h-full">
+      <Sidebar params={params} />
+      <div className="flex flex-col flex-1">
+        <Header params={params} />
         {children}
       </div>
     </div>

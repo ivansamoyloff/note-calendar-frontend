@@ -60,12 +60,12 @@ function CustomCalendar({
         cell: "relative p-0 text-center focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-blue-20 [&:has([aria-selected])]:rounded-full",
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "text-base p-0 rounded-full font-light cursor-pointer aria-selected:opacity-100 font-mono hover:bg-blue-20 hover:text-blue-50 focus-visible:border-transparent focus-visible:ring-3 focus-visible:ring-blue-50",
+          "text-base p-0 rounded-full font-light cursor-pointer aria-selected:opacity-100 font-mono dark:hover:bg-blue-70 hover:bg-blue-20 hover:text-blue-50 focus-visible:border-transparent focus-visible:ring-3 focus-visible:ring-blue-50",
           isYearView ? 'size-7 text-xs' : 'size-8 text-sm'
         ),
         day_selected:
-          "bg-blue-20 text-blue-50 rounded-full border border-blue-50 hover:bg-blue-30 hover:text-blue-50 focus:bg-blue-20 focus:text-blue-50",
-        day_today: "text-blue-50 bg-blue-20 ",
+          "bg-gray-10 text-blue-50 rounded-full border border-blue-50 dark:text-blue-60 dark:border-blue-60 dark:bg-blue-100 dark:hover:bg-blue-80 dark:hover:text-gray-10 hover:bg-blue-30 hover:text-gray-10 focus:bg-blue-20 focus:text-blue-50",
+        day_today: "text-blue-50 bg-blue-20 dark:bg-blue-80 hover:bg-blue-30 hover:text-gray-10 focus:bg-blue-20 focus:text-blue-50",
         day_outside:
           "day-outside text-disabled aria-selected:text-muted-foreground",
         day_disabled: "text-disabled opacity-50",

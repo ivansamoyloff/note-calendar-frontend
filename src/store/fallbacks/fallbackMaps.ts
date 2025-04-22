@@ -2,6 +2,7 @@ import type IModalState from '@/store/interfaces/IModalState';
 import type IUserState  from '@/store/interfaces/IUserState';
 import type ITaskState from '@/store/interfaces/ITaskState';
 import type IEventState from '@/store/interfaces/IEventState';
+import ISettingsState from '../interfaces/ISettingsState';
 
 export const modalFallbacks:  { [K in keyof IModalState]: IModalState[K] } = {
   isOpen: false,
@@ -44,3 +45,8 @@ export const eventFallbacks: { [K in keyof IEventState]: IEventState[K] } = {
   removeEventFromServer: async () => ({ success: false }),
   syncToServer: async () => ({ success: false }),
 };
+
+export const settingsFallbacks: { [K in keyof ISettingsState]: ISettingsState[K] } = {
+  theme: 'system',
+  setTheme: () => {},
+}

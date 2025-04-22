@@ -164,7 +164,7 @@ export default function WeekView({ allEvents = mockEvents, date }: { allEvents: 
               </div>
             </div>
             <div className={cn(
-              'min-w-3 border-[2px] border-l-0 border-gray-20',
+              'min-w-3 border-[2px] border-l-0 border-gray-20 dark:border-blue-80',
               idx === 0 ? '' : 'border-t-0',
               idx + 1 === arr.length ? 'border-b-0' : ''
             )}>

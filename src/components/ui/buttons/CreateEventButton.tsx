@@ -2,7 +2,7 @@
 import { storeAccessors } from '@/store/utils/storeAccessors/storeAccessors';
 import { CustomButton } from '@/components/ui/custom/CustomButton';
 import EventModal from '@/components/modals/EventModal';
-import SignModal from '@/components/modals/SignModal';
+
 
 export default function CreateEventButton() {
   const openModal = storeAccessors.modal('openModal');
@@ -10,9 +10,8 @@ export default function CreateEventButton() {
   return(
     <CustomButton
       size='lg'
-      className='flex items-center justify-center gap-4 max-w-76'
-      // onClick={() => openModal(<EventModal type='event' />)}
-      onClick={() => openModal(<SignModal />)}
+      className='flex items-center justify-center gap-2 max-w-76'
+      onClick={() => openModal(<EventModal type='event' />)}
     >
       Create
       <svg className='w-9.5 h-9.5 fill-current' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" fill="none">

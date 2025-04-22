@@ -75,7 +75,7 @@ export default function WeekDayColumn({
           {format(date, 'EEE, d')}
         </span>
         <div className={cn(
-          "h-3 border-l-0 border-r-2 w-full border-gray-20",
+          "h-3 border-l-0 border-r-2 w-full border-gray-20 dark:border-blue-80",
           first ? 'border-l-2' : '' 
           )}></div>
       </div>
